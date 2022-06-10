@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+factorise	fast.cpp	/^std::vector<int> factorise(int &integer) {$/;"	f
+factorize	main.cpp	/^std::vector<int> factorize(int &integer) {$/;"	f
+fastPalindrome	fast.cpp	/^bool fastPalindrome(int integer, std::map<int,bool>&memo) {$/;"	f
+isPalindrome	fast.cpp	/^bool isPalindrome(int integer) {$/;"	f
+isPalindrome	main.cpp	/^bool isPalindrome(int integer) {$/;"	f
+main	fast.cpp	/^int main() {$/;"	f
+main	main.cpp	/^int main() {$/;"	f
+palindromeMemoMap	fast.cpp	/^std::map<int, bool> palindromeMemoMap;$/;"	v
+palindromeMemoMap	main.cpp	/^std::map<int, bool> palindromeMemoMap;$/;"	v
+printVec	fast.cpp	/^void printVec(std::vector<int> &vec) {$/;"	f
+printVec	main.cpp	/^void printVec(std::vector<int> &vec) {$/;"	f
+rebuild	fast.cpp	/^int rebuild(std::vector<int> &factors) {$/;"	f
+solve	fast.cpp	/^void solve(int A) {$/;"	f
+solve	main.cpp	/^void solve(int A) {$/;"	f
+testPalindrome	fast.cpp	/^void testPalindrome() {$/;"	f
+testPalindrome	main.cpp	/^void testPalindrome() {$/;"	f
