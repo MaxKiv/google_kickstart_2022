@@ -13,7 +13,7 @@ void printVec(std::vector<int> &vec) {
 }
 
 // Factorize an integer
-std::vector<int> factorise(const int &int_in) {
+std::vector<int> separation(const int &int_in) {
   int integer = int_in;
   int oom = log10(integer);
   std::vector<int> factors(oom + 1);
@@ -26,7 +26,7 @@ std::vector<int> factorise(const int &int_in) {
 }
 
 // Rebuild integer from factors
-int defactor(std::vector<int> &factors) {
+int integration(std::vector<int> &factors) {
   int out = 0;
   int oom = 1;
   for (std::vector<int>::reverse_iterator rit = factors.rbegin();
@@ -35,6 +35,17 @@ int defactor(std::vector<int> &factors) {
     oom *= 10;
   }
   return out;
+}
+
+std::vector<int> factorise(const int& integer) {
+  int max = pow(10,10);
+  std::vector<int> factors;
+  for(size_t i = 2; i < max; i++) {
+    if((integer % i) == 0) {
+      factors.push_back(i);
+    }
+  }
+  return factors;
 }
 
 // Std like pass iterators
@@ -58,8 +69,8 @@ bool fasterPalindrome(int integer, std::map<int, bool> &memo) {
     return memo[integer];
   }
   std::cout << "no map hit :(" << std::endl;
-  // no cache hit, we have to do work: factorise the integer
-  std::vector<int> fac = factorise(integer);
+  // no cache hit, we have to do work: separation the integer
+  std::vector<int> fac = separation(integer);
   // look at outer values, they must be equal if this int is to be a palindrome
   std::vector<int>::iterator begin = fac.begin();
   std::vector<int>::iterator end = (fac.end() -1 );
@@ -87,8 +98,6 @@ void solve(int A) {
   printVec(fac);
   std::cout << fac.size() << std::endl;
 
-  
-
 }
 
 int main() {
@@ -106,8 +115,8 @@ int main() {
   /* std::cout << t << std::endl; */
   /* std::vector<int> tfac = factorise(t); */
   /* printVec(tfac); */
-  /* int tback = defactor(tfac); */
-  /* std::cout << "defactor int = " << tback << std::endl; */
+  /* int tback = integration(tfac); */
+  /* std::cout << "integration int = " << tback << std::endl; */
 
   /* testPalindrome(); */
   return 0;
